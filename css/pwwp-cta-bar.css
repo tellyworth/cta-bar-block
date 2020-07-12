@@ -1,0 +1,84 @@
+.pwwp--cta-bar {
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.pwwp--cta-bar.alignfull {
+  padding-left: 1.25rem !important;
+  padding-right: 1.25rem !important;
+}
+
+.pwwp--cta-bar--stick-to-bottom {
+  position: sticky;
+  bottom: 0;
+}
+
+.pwwp--cta-bar--stick-to-top {
+  position: sticky;
+  top: 0;
+}
+
+.logged-in.admin-bar .pwwp--cta-bar--stick-to-top {
+  position: sticky;
+  top: 30px;
+}
+
+@media (max-width:782px) {
+	.logged-in.admin-bar .pwwp--cta-bar--stick-to-top {
+	  top: 45px;
+	}
+}
+
+.pwwp--cta-bar .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.75rem 1.25rem;
+  color: inherit;
+}
+
+.pwwp--cta-bar .close:not(.toggle) {
+  background:none;
+}
+
+.pwwp--cta-bar span.close{
+  margin-top:-30px !important;
+}
+
+.pwwp--cta-bar .close {
+  float: right;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: inherit;
+  text-shadow: 0 1px 0 #fff;
+  opacity: .5;
+}
+
+.pwwp--cta-bar .close:hover, .pwwp--cta-bar .close:focus {
+  color: #000;
+  background:none;
+}
+
+.pwwp--cta-bar .close:not(:disabled):not(.disabled) {
+  cursor: pointer;
+  height: 100%;
+  right: 1rem;
+}
+
+.pwwp--cta-bar button.close {
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  -webkit-appearance: none;
+}
+
+.pwwp--cta-bar button.close:hover,
+.pwwp--cta-bar button.close:active {
+  color:inherit;
+  background:none;
+}
+
+/** Editor CSS **/
+.block-editor .pwwp--cta-bar .close{ margin-top:-10% !important; }
