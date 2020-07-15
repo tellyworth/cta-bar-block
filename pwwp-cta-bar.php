@@ -10,6 +10,8 @@
  * Text Domain: cta-bar
  * Network: false
  *
+ * Initial version is incorporates code from _Simple Alert Blocks_ by Andrew Lima. Plugin idea is inspired by their original block plugin.
+ *
  * @package pattonwebz/cta-bar-block
  */
 
