@@ -57,8 +57,8 @@ registerBlockType ( 'pattonwebz/cta-bar', {
 
 		},
 
-        edit: props => {
-        	const { attributes: { stickyType, content, dismiss, bgColor, textColor }, setAttributes } = props;
+    edit: props => {
+      const { attributes: { stickyType, content, dismiss, bgColor, textColor }, setAttributes } = props;
 			const backgroundStyle = {
 				backgroundColor: bgColor
 			};
@@ -126,13 +126,14 @@ registerBlockType ( 'pattonwebz/cta-bar', {
 			const textStyle = {
 				color: textColor
 			};
+
 			return (
        			<div className={ "pwwp--cta-bar pwwp--cta-bar--" + stickyType } style={ backgroundStyle } role="alert">
-					<div className="pwwp--cta-bar--inner" style={ textStyle } >
-						<RichText.Content tagname="p" value={content} />
-       					{ dismiss === true ? <button type="button" className="close" data-dismiss="pwwp-ctabar" aria-label="Close"><span aria-hidden="true">&times;</span></button> : null }
-					</div>
-				</div>
+    					<div className="pwwp--cta-bar--inner" style={ textStyle } >
+    						<RichText.Content tagname="span" value={content} />
+           			{ dismiss === true ? <button type="button" className="close" data-dismiss="pwwp-ctabar" aria-label="Close" onClick="clearBlock(this)"><span aria-hidden="true">&times;</span></button> : null }
+    					</div>
+    				</div>
        		);
         },
 		supports: {

@@ -80,5 +80,14 @@
   background:none;
 }
 
+.pwwp--cta-bar--fading {
+    opacity: 1;
+    transition: all ease 1.0s;
+}
+
+.pwwp--cta-bar--hidden {
+    opacity: 0;
+}
+
 /** Editor CSS **/
 .block-editor .pwwp--cta-bar .close{ margin-top:-10% !important; }

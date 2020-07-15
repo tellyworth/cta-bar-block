@@ -30,6 +30,14 @@ function pwwp_cta_bar_register_files_for_gutenberg() {
 		false
 	);
 
+    wp_register_script(
+		'pwwp-cta-bar-clear-block',
+		plugins_url( 'src/clearBlock.js', __FILE__ ),
+		array( 'pwwp-cta-bar-js' ),
+		'1.0.0-dev',
+		false
+	);
+
 	wp_register_style(
 		'pwwp-cta-bar-css',
 		plugins_url( 'css/pwwp-cta-bar.css', __FILE__ ),
@@ -57,6 +65,7 @@ add_action( 'init', 'pwwp_cta_bar_register_files_for_gutenberg' );
 function pwwp_cta_bar_enqueue_styles_scripts() {
 	if ( has_block( 'pattonwebz/cta-bar' ) ) {
 		wp_enqueue_script( 'pwwp-cta-bar-js' );
+        wp_enqueue_script( 'pwwp-cta-bar-clear-block' );
 		wp_enqueue_style( 'pwwp-cta-bar-css' );
 	}
 }

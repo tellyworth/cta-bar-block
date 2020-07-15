@@ -232,21 +232,28 @@ registerBlockType('pattonwebz/cta-bar', {
         dismiss = _props$attributes2.dismiss,
         bgColor = _props$attributes2.bgColor,
         textColor = _props$attributes2.textColor;
+    var backgroundStyle = {
+      backgroundColor: bgColor
+    };
+    var textStyle = {
+      color: textColor
+    };
     return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
       className: "pwwp--cta-bar pwwp--cta-bar--" + stickyType,
-      style: "background-color: " + bgColor,
+      style: backgroundStyle,
       role: "alert"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
       className: "pwwp--cta-bar--inner",
-      style: "color: " + textColor
+      style: textStyle
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText.Content, {
-      tagname: "p",
+      tagname: "span",
       value: content
     }), dismiss === true ? Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("button", {
       type: "button",
       className: "close",
       "data-dismiss": "pwwp-ctabar",
-      "aria-label": "Close"
+      "aria-label": "Close",
+      onClick: "clearBlock(this)"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("span", {
       "aria-hidden": "true"
     }, "\xD7")) : null));
