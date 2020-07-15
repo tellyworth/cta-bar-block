@@ -1,4 +1,4 @@
-=== Simple Alert Blocks ===
+=== CTA Bar ===
 Contributors: williampatton
 Tags: block, gutenberg, block, block editor, cta
 Requires at least: 5.0
