@@ -73,7 +73,6 @@ function pattonwebz_cta_bar_block_enqueue_styles_scripts() {
         wp_enqueue_script( 'pattonwebz-cta-bar-js' );
     }
     if ( has_block( 'pattonwebz/cta-bar' ) ) {
-        wp_enqueue_script( 'pattonwebz-cta-bar-js' );
         wp_enqueue_script( 'pattonwebz-cta-bar-clear-block' );
         wp_enqueue_style( 'pattonwebz-cta-bar-css' );
 	}
