@@ -218,7 +218,7 @@ registerBlockType('pattonwebz/cta-bar', {
           content: content
         });
       },
-      placeholder: "Add text...",
+      placeholder: __('Add text...', 'pattonwebz-cta-bar'),
       format: "string",
       preserveWhiteSpace: "true"
     }), dismiss === true ? Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("span", {
@@ -261,7 +261,7 @@ registerBlockType('pattonwebz/cta-bar', {
     }, "\xD7")) : null));
   },
   supports: {
-    align: ['full']
+    align: ['full', 'wide']
   }
 });
 

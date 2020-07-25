@@ -67,54 +67,54 @@ registerBlockType (
 				color: textColor
 			};
 			return ([
-    			<InspectorControls>
-    				<PanelBody>
-    					<SelectControl
-    						label    = { __( 'Please select the type of alert you want to display.', 'pattonwebz-cta-bar' ) }
-    						options  = { stickyTypes }
-  							value    = { stickyType }
-  							onChange = { stickyType => { setAttributes( { stickyType } ) } }
-    					/>
-    				</PanelBody>
-					<PanelBody>
-						<CheckboxControl
-							heading  = { __( 'Please select if the notice should be dismissible.', 'pattonwebz-cta-bar' ) }
-							label    = { __( 'Dismissible notice?', 'pattonwebz-cta-bar' ) }
-							help     = { __( 'Show an "x" and allow users to close this alert.', 'pattonwebz-cta-bar' ) }
-							checked  = { dismiss }
-							onChange = { dismiss => { setAttributes( { dismiss } ) } }
-						/>
-					</PanelBody>
-					<PanelBody>
-						<PanelColorSettings
-							title={ __( 'Color select', 'pattonwebz-cta-bar' ) }
-							colorSettings={
+    		<InspectorControls>
+    			<PanelBody>
+    				<SelectControl
+    					label    = { __( 'Please select the type of alert you want to display.', 'pattonwebz-cta-bar' ) }
+    					options  = { stickyTypes }
+  						value    = { stickyType }
+  						onChange = { stickyType => { setAttributes( { stickyType } ) } }
+    				/>
+    			</PanelBody>
+				  <PanelBody>
+					  <CheckboxControl
+						  heading  = { __( 'Please select if the notice should be dismissible.', 'pattonwebz-cta-bar' ) }
+						  label    = { __( 'Dismissible notice?', 'pattonwebz-cta-bar' ) }
+						  help     = { __( 'Show an "x" and allow users to close this alert.', 'pattonwebz-cta-bar' ) }
+						  checked  = { dismiss }
+						  onChange = { dismiss => { setAttributes( { dismiss } ) } }
+				  	/>
+				  </PanelBody>
+				  <PanelBody>
+				    <PanelColorSettings
+						  title         = { __( 'Color select', 'pattonwebz-cta-bar' ) }
+						  colorSettings = {
                 [
                   {
-                      value: bgColor,
-                      onChange: ( bgColor ) => setAttributes( { bgColor } ),
-                      label: __( 'Background Color', 'pattonwebz-cta-bar' ),
+                    value: bgColor,
+                    onChange: ( bgColor ) => setAttributes( { bgColor } ),
+                    label: __( 'Background Color', 'pattonwebz-cta-bar' ),
                   },
                   {
-                      value: textColor,
-                      onChange: ( textColor ) => setAttributes( { textColor } ),
-                      label: __( 'Text Color', 'pattonwebz-cta-bar' ),
+                    value: textColor,
+                    onChange: ( textColor ) => setAttributes( { textColor } ),
+                    label: __( 'Text Color', 'pattonwebz-cta-bar' ),
                   },
                 ]
               }
-						/>
-					</PanelBody>
-    			</InspectorControls>,
+					  />
+				  </PanelBody>
+    		</InspectorControls>,
 				<div className={ "pwwp--cta-bar pwwp--cta-bar--" + stickyType } style={ backgroundStyle } role="alert">
 					<div className="pwwp--cta-bar--inner" style={ textStyle } >
 						<RichText
-							tagName = "span"
-							className = "content"
-							value = { content }
-							onChange = { ( content ) => setAttributes( { content } ) }
-							placeholder = 'Add text...'
-							format="string"
-              preserveWhiteSpace="true"
+							tagName            = "span"
+							className          = "content"
+							value              = { content }
+							onChange           = { ( content ) => setAttributes( { content } ) }
+							placeholder        = { __( 'Add text...', 'pattonwebz-cta-bar' ) }
+							format             = "string"
+              preserveWhiteSpace = "true"
 						/>
 						{ dismiss === true ? <span className="close" aria-hidden="true" >&times;</span> : null }
 					</div>
@@ -140,7 +140,7 @@ registerBlockType (
      	);
     },
 		supports: {
-	    align: [ 'full' ],
+	    align: [ 'full', 'wide' ],
 	  },
 	}
 );
