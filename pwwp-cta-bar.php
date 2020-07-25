@@ -24,27 +24,30 @@ defined( 'ABSPATH' ) || exit;
  * @return void
  */
 function pwwp_cta_bar_register_files_for_gutenberg() {
-	wp_register_script(
-		'pwwp-cta-bar-js',
-		plugins_url( 'build/index.js', __FILE__ ),
-		array( 'wp-blocks', 'wp-element', 'wp-editor' ),
-		'1.0.0-dev',
+    $base_path  = plugin_dir_path(__FILE__);
+    $asset_info = include $base_path . 'build/index.asset.php';
+
+    wp_register_script(
+		'pattonwebz-cta-bar-js',
+		$base_path . 'build/index.js',
+		$asset_info['dependencies'],
+		$asset_info['version'],
 		false
 	);
 
     wp_register_script(
-		'pwwp-cta-bar-clear-block',
-		plugins_url( 'src/clearBlock.js', __FILE__ ),
-		array( 'pwwp-cta-bar-js' ),
-		'1.0.0-dev',
+		'pattonwebz-cta-bar-clear-block',
+		$base_path . 'src/clearBlock.js',
+		[],
+		$asset_info['version'],
 		false
 	);
 
 	wp_register_style(
-		'pwwp-cta-bar-css',
-		plugins_url( 'css/pwwp-cta-bar.css', __FILE__ ),
-		array(),
-		'1.0.0'
+		'pattonwebz-cta-bar-css',
+		$base_path . 'css/pwwp-cta-bar.css',
+		[],
+		$asset_info['version'],
 	);
 
 	register_block_type(
@@ -67,7 +70,7 @@ add_action( 'init', 'pwwp_cta_bar_register_files_for_gutenberg' );
 function pwwp_cta_bar_enqueue_styles_scripts() {
 	if ( has_block( 'pattonwebz/cta-bar' ) ) {
         wp_enqueue_script( 'pwwp-cta-bar-clear-block' );
-		wp_enqueue_style( 'pwwp-cta-bar-css' );
+        wp_enqueue_style( 'pwwp-cta-bar-css' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'pwwp_cta_bar_enqueue_styles_scripts' );
