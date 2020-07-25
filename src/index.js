@@ -24,14 +24,15 @@ const stickyTypes = [
 	{ value: 'stick-to-bottom', label: 'Sticky Bottom' },
 ];
 
-registerBlockType ( 'pattonwebz/cta-bar', {
+registerBlockType (
+  'pattonwebz/cta-bar', {
 		title: __( 'CTA Bar', 'pwwp-cta-bar'  ),
 		description: __( 'CTA Bar', 'pwwp-cta-bar' ),
 		category: 'layout',
 		icon: {
 			src: 'minus',
-			background: '#0005ff',
-			foreground: '#004085',
+			background: '#f26535',
+			foreground: '#ffffff',
 		},
 
 		attributes: {

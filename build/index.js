@@ -127,8 +127,8 @@ registerBlockType('pattonwebz/cta-bar', {
   category: 'layout',
   icon: {
     src: 'minus',
-    background: '#0005ff',
-    foreground: '#004085'
+    background: '#f26535',
+    foreground: '#ffffff'
   },
   attributes: {
     stickyType: {
