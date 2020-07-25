@@ -4,7 +4,7 @@
  * Description: Add CTA or alert bars to your posts and pages.
  * Author: William Patton
  * Author URI: https://www.pattonwebz.com/
- * Version: 1.0.0-dev
+ * Version: 1.0.0
  * License: GPL2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: pattonwebz-cta-bar

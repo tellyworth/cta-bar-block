@@ -3,11 +3,10 @@
 	"title": "CTA Bar",
 	"category": "layout",
 	"icon": "minus",
-	"description": "A CTA Bar that can be stuck to the to or bottom of the page/content.",
+	"description": "A CTA Bar that can be stuck to the top or bottom of the page/post content.",
 	"keywords": [ "alert", "message", "cta" ],
-	"textdomain": "pwwp-cta-bar",
+	"textdomain": "pattonwebz-cta-bar",
 	"editorScript": "file:./build/index.js",
-	"script": "file:./build/index.js",
 	"editorStyle": "file:./css/pwwp-cta-bar.css",
 	"style": "file:./css/pwwp-cta-bar.css"
 }

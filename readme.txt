@@ -8,7 +8,7 @@ Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-A block capable of adding CTA bars within posts and have them stick to top or bottom of the page.
+A block capable of adding CTA bars within posts and have them stick to the top or bottom of the page as users scroll past them.
 
 == Description ==
 
@@ -20,16 +20,17 @@ Add CTA bars to your posts/pages inviting readers to perform the action that you
 3. The `CTA Bar` block will becoming available in your editor.
 
 == Frequently Asked Questions ==
-= Does this work for WordPress < 5.0? =
-If you are using a version before 5.0, please install the Gutenberg plugin.
 
 = Does this work in the Classic Editor? =
-No this only works with WordPress new block editor.
+No - this only works with the new WordPress block editor.
 
-= 1.0 =
+= Does this work for WordPress < 5.0? =
+This is a custom block for the new editor added in WordPress 5.0. You need at least that version of WP.
+
+= 1.0.0 =
 Initial release.
 
 == Upgrade Notice ==
 
-= 1.0 =
+= 1.0.0 =
 Initial release.

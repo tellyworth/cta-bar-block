@@ -1,14 +1,14 @@
 {
-  "name": "cta-bar-block",
+  "name": "pattonwebz/cta-bar-block",
   "description": "",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "build/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pattonwebz/cta-bar-block.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "William Patton",
+  "license": "GPL-2.0-or-later",
   "bugs": {
     "url": "https://github.com/pattonwebz/cta-bar-block/issues"
   },
