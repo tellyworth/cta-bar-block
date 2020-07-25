@@ -219,7 +219,8 @@ registerBlockType('pattonwebz/cta-bar', {
         });
       },
       placeholder: "Add text...",
-      format: "string"
+      format: "string",
+      preserveWhiteSpace: "true"
     }), dismiss === true ? Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("span", {
       className: "close",
       "aria-hidden": "true"
@@ -247,7 +248,8 @@ registerBlockType('pattonwebz/cta-bar', {
       style: textStyle
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText.Content, {
       tagname: "span",
-      value: content
+      value: content,
+      preserveWhiteSpace: "true"
     }), dismiss === true ? Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("button", {
       type: "button",
       className: "close",

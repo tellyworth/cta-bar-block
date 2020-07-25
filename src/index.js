@@ -114,6 +114,7 @@ registerBlockType (
 							onChange = { ( content ) => setAttributes( { content } ) }
 							placeholder = 'Add text...'
 							format="string"
+              preserveWhiteSpace="true"
 						/>
 						{ dismiss === true ? <span className="close" aria-hidden="true" >&times;</span> : null }
 					</div>
@@ -132,7 +133,7 @@ registerBlockType (
 		  return (
      		<div className={ "pwwp--cta-bar pwwp--cta-bar--" + stickyType } style={ backgroundStyle } role="alert">
     			<div className="pwwp--cta-bar--inner" style={ textStyle } >
-    				<RichText.Content tagname="span" value={content} />
+    				<RichText.Content tagname="span" value={content} preserveWhiteSpace="true" />
        			{ dismiss === true ? <button type="button" className="close" data-dismiss="pwwp-ctabar" aria-label="Close" onClick="clearBlock(this)"><span aria-hidden="true">&times;</span></button> : null }
     			</div>
     		</div>
