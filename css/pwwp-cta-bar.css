@@ -90,4 +90,6 @@
 }
 
 /** Editor CSS **/
-.block-editor .pwwp--cta-bar .close{ margin-top:-10% !important; }
+.block-editor .pwwp--cta-bar .close{
+    margin-top: 0 !important;
+}
