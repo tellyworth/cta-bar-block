@@ -82,7 +82,7 @@
 
 .pwwp--cta-bar--fading {
     opacity: 1;
-    transition: all ease 1.0s;
+    transition: all ease 0.85s;
 }
 
 .pwwp--cta-bar--hidden {
