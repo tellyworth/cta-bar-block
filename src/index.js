@@ -19,15 +19,15 @@ const {
 
 // Available alert types for a dropdown setting.
 const stickyTypes = [
-	{ value: 'no-sticky', label: 'No Sticky' },
-	{ value: 'stick-to-top', label: 'Sticky Top' },
-	{ value: 'stick-to-bottom', label: 'Sticky Bottom' },
+	{ value: 'no-sticky', label: __( 'No Sticky', 'pattonwebz-cta-bar' ) },
+	{ value: 'stick-to-top', label: __( 'Sticky Top', 'pattonwebz-cta-bar' ) },
+	{ value: 'stick-to-bottom', label: __( 'Sticky Bottom', 'pattonwebz-cta-bar' ) },
 ];
 
 registerBlockType (
   'pattonwebz/cta-bar', {
-		title: __( 'CTA Bar', 'pwwp-cta-bar'  ),
-		description: __( 'CTA Bar', 'pwwp-cta-bar' ),
+		title: __( 'CTA Bar', 'pattonwebz-cta-bar'  ),
+		description: __( 'CTA Bar', 'pattonwebz-cta-bar' ),
 		category: 'layout',
 		icon: {
 			src: 'minus',
@@ -70,39 +70,40 @@ registerBlockType (
     			<InspectorControls>
     				<PanelBody>
     					<SelectControl
-    						label = 'Please select the type of alert you want to display.'
-    						options = { stickyTypes }
-  							value = { stickyType }
+    						label    = { __( 'Please select the type of alert you want to display.', 'pattonwebz-cta-bar' ) }
+    						options  = { stickyTypes }
+  							value    = { stickyType }
   							onChange = { stickyType => { setAttributes( { stickyType } ) } }
     					/>
     				</PanelBody>
 					<PanelBody>
 						<CheckboxControl
-							heading="Please select if the notice should be dismissible."
-							label="Dismissible notice?"
-							help="Show an 'x' and allow users to close this alert."
-							checked={ dismiss }
-							onChange={ dismiss => { setAttributes( { dismiss } ) } }
+							heading  = { __( 'Please select if the notice should be dismissible.', 'pattonwebz-cta-bar' ) }
+							label    = { __( 'Dismissible notice?', 'pattonwebz-cta-bar' ) }
+							help     = { __( 'Show an "x" and allow users to close this alert.', 'pattonwebz-cta-bar' ) }
+							checked  = { dismiss }
+							onChange = { dismiss => { setAttributes( { dismiss } ) } }
 						/>
 					</PanelBody>
 					<PanelBody>
 						<PanelColorSettings
-							title={ __( 'Color select' ) }
-							colorSettings={ [
-		                        {
-		                            value: bgColor,
-		                            onChange: ( bgColor ) => setAttributes( { bgColor } ),
-		                            label: __( 'Background Color' ),
-		                        },
-		                        {
-		                            value: textColor,
-		                            onChange: ( textColor ) => setAttributes( { textColor } ),
-		                            label: __( 'Text Color' ),
-		                        },
-		                    ] }
+							title={ __( 'Color select', 'pattonwebz-cta-bar' ) }
+							colorSettings={
+                [
+                  {
+                      value: bgColor,
+                      onChange: ( bgColor ) => setAttributes( { bgColor } ),
+                      label: __( 'Background Color', 'pattonwebz-cta-bar' ),
+                  },
+                  {
+                      value: textColor,
+                      onChange: ( textColor ) => setAttributes( { textColor } ),
+                      label: __( 'Text Color', 'pattonwebz-cta-bar' ),
+                  },
+                ]
+              }
 						/>
 					</PanelBody>
-
     			</InspectorControls>,
 				<div className={ "pwwp--cta-bar pwwp--cta-bar--" + stickyType } style={ backgroundStyle } role="alert">
 					<div className="pwwp--cta-bar--inner" style={ textStyle } >
@@ -128,17 +129,17 @@ registerBlockType (
 				color: textColor
 			};
 
-			return (
-       			<div className={ "pwwp--cta-bar pwwp--cta-bar--" + stickyType } style={ backgroundStyle } role="alert">
-    					<div className="pwwp--cta-bar--inner" style={ textStyle } >
-    						<RichText.Content tagname="span" value={content} />
-           			{ dismiss === true ? <button type="button" className="close" data-dismiss="pwwp-ctabar" aria-label="Close" onClick="clearBlock(this)"><span aria-hidden="true">&times;</span></button> : null }
-    					</div>
-    				</div>
-       		);
-        },
+		  return (
+     		<div className={ "pwwp--cta-bar pwwp--cta-bar--" + stickyType } style={ backgroundStyle } role="alert">
+    			<div className="pwwp--cta-bar--inner" style={ textStyle } >
+    				<RichText.Content tagname="span" value={content} />
+       			{ dismiss === true ? <button type="button" className="close" data-dismiss="pwwp-ctabar" aria-label="Close" onClick="clearBlock(this)"><span aria-hidden="true">&times;</span></button> : null }
+    			</div>
+    		</div>
+     	);
+    },
 		supports: {
-	        align: [ 'full' ],
-	    },
+	    align: [ 'full' ],
+	  },
 	}
 );

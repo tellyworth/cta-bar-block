@@ -7,7 +7,7 @@
  * Version: 1.0.0-dev
  * License: GPL2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain: cta-bar
+ * Text Domain: pattonwebz-cta-bar
  * Network: false
  *
  * Initial version is incorporates code from _Simple Alert Blocks_ by Andrew Lima. Plugin idea is inspired by their original block plugin.

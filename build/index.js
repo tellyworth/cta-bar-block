@@ -113,17 +113,17 @@ var _wp$blockEditor = wp.blockEditor,
 
 var stickyTypes = [{
   value: 'no-sticky',
-  label: 'No Sticky'
+  label: __('No Sticky', 'pattonwebz-cta-bar')
 }, {
   value: 'stick-to-top',
-  label: 'Sticky Top'
+  label: __('Sticky Top', 'pattonwebz-cta-bar')
 }, {
   value: 'stick-to-bottom',
-  label: 'Sticky Bottom'
+  label: __('Sticky Bottom', 'pattonwebz-cta-bar')
 }];
 registerBlockType('pattonwebz/cta-bar', {
-  title: __('CTA Bar', 'pwwp-cta-bar'),
-  description: __('CTA Bar', 'pwwp-cta-bar'),
+  title: __('CTA Bar', 'pattonwebz-cta-bar'),
+  description: __('CTA Bar', 'pattonwebz-cta-bar'),
   category: 'layout',
   icon: {
     src: 'minus',
@@ -165,7 +165,7 @@ registerBlockType('pattonwebz/cta-bar', {
       color: textColor
     };
     return [Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(InspectorControls, null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(PanelBody, null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(SelectControl, {
-      label: "Please select the type of alert you want to display.",
+      label: __('Please select the type of alert you want to display.', 'pattonwebz-cta-bar'),
       options: stickyTypes,
       value: stickyType,
       onChange: function onChange(stickyType) {
@@ -174,9 +174,9 @@ registerBlockType('pattonwebz/cta-bar', {
         });
       }
     })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(PanelBody, null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(CheckboxControl, {
-      heading: "Please select if the notice should be dismissible.",
-      label: "Dismissible notice?",
-      help: "Show an 'x' and allow users to close this alert.",
+      heading: __('Please select if the notice should be dismissible.', 'pattonwebz-cta-bar'),
+      label: __('Dismissible notice?', 'pattonwebz-cta-bar'),
+      help: __('Show an "x" and allow users to close this alert.', 'pattonwebz-cta-bar'),
       checked: dismiss,
       onChange: function onChange(dismiss) {
         setAttributes({
@@ -184,7 +184,7 @@ registerBlockType('pattonwebz/cta-bar', {
         });
       }
     })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(PanelBody, null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(PanelColorSettings, {
-      title: __('Color select'),
+      title: __('Color select', 'pattonwebz-cta-bar'),
       colorSettings: [{
         value: bgColor,
         onChange: function onChange(bgColor) {
@@ -192,7 +192,7 @@ registerBlockType('pattonwebz/cta-bar', {
             bgColor: bgColor
           });
         },
-        label: __('Background Color')
+        label: __('Background Color', 'pattonwebz-cta-bar')
       }, {
         value: textColor,
         onChange: function onChange(textColor) {
@@ -200,7 +200,7 @@ registerBlockType('pattonwebz/cta-bar', {
             textColor: textColor
           });
         },
-        label: __('Text Color')
+        label: __('Text Color', 'pattonwebz-cta-bar')
       }]
     }))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
       className: "pwwp--cta-bar pwwp--cta-bar--" + stickyType,
