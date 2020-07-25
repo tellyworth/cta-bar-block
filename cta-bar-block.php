@@ -46,7 +46,7 @@ function pattonwebz_cta_bar_block_register_files_for_gutenberg() {
 
 	wp_register_style(
 		'pattonwebz-cta-bar-css',
-		$base_url . 'css/pwwp-cta-bar.css',
+		$base_url . 'css/cta-bar.css',
 		[],
 		$asset_info['version'],
 	);
