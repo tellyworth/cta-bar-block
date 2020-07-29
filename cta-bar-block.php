@@ -24,11 +24,11 @@ defined( 'ABSPATH' ) || exit;
  * @return void
  */
 function pattonwebz_cta_bar_block_register_files_for_gutenberg() {
-    $base_path  = plugin_dir_path( __FILE__ );
-    $base_url   = plugin_dir_url( __FILE__ );
-    $asset_info = include $base_path . 'build/index.asset.php';
+	$base_path  = plugin_dir_path( __FILE__ );
+	$base_url   = plugin_dir_url( __FILE__ );
+	$asset_info = include $base_path . 'build/index.asset.php';
 
-    wp_register_script(
+	wp_register_script(
 		'pattonwebz-cta-bar-js',
 		$base_url . 'build/index.js',
 		$asset_info['dependencies'],
@@ -36,7 +36,7 @@ function pattonwebz_cta_bar_block_register_files_for_gutenberg() {
 		false
 	);
 
-    wp_register_script(
+	wp_register_script(
 		'pattonwebz-cta-bar-clear-block',
 		$base_url . 'frontend/clearBlock.js',
 		[],
@@ -69,12 +69,12 @@ add_action( 'init', 'pattonwebz_cta_bar_block_register_files_for_gutenberg' );
  * @return void
  */
 function pattonwebz_cta_bar_block_enqueue_styles_scripts() {
-    if( is_admin() ) {
-        wp_enqueue_script( 'pattonwebz-cta-bar-js' );
-    }
-    if ( has_block( 'pattonwebz/cta-bar' ) ) {
-        wp_enqueue_script( 'pattonwebz-cta-bar-clear-block' );
-        wp_enqueue_style( 'pattonwebz-cta-bar-css' );
+	if ( is_admin() ) {
+		wp_enqueue_script( 'pattonwebz-cta-bar-js' );
+	}
+	if ( has_block( 'pattonwebz/cta-bar' ) ) {
+		wp_enqueue_script( 'pattonwebz-cta-bar-clear-block' );
+		wp_enqueue_style( 'pattonwebz-cta-bar-css' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'pattonwebz_cta_bar_block_enqueue_styles_scripts' );
