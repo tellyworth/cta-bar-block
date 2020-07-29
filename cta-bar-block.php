@@ -48,7 +48,7 @@ function pattonwebz_cta_bar_block_register_files_for_gutenberg() {
 		'pattonwebz-cta-bar-css',
 		$base_url . 'css/cta-bar.css',
 		[],
-		$asset_info['version'],
+		$asset_info['version']
 	);
 
 	register_block_type(
